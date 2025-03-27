@@ -1,3 +1,9 @@
+import { useLocation, useSearchParams } from "react-router";
+
 export const Players = () => {
-  return <div className="container">Players</div>;
+  const location = useLocation();
+  const [searchParams] = useSearchParams(location.search);
+  const teamId = searchParams.get("teamId");
+
+  return <div className="container">Players for {teamId}</div>;
 };
