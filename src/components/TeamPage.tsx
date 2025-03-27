@@ -1,5 +1,9 @@
+import { useParams } from "react-router";
+
 const TeamPage = () => {
-  return <div>TeamPage</div>;
+  const { teamId } = useParams();
+
+  return <div>TeamPage for {teamId}</div>;
 };
 
 export default TeamPage;
