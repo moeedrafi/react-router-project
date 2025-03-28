@@ -1,7 +1,7 @@
-import { Teams } from "../utils/types";
+import { TeamsType } from "../utils/types";
 import useFetch from "./useFetch";
 
-export default function usePlayerNames(team: Teams): {
+export default function usePlayerNames(team: TeamsType): {
   loading: boolean;
   response: string[] | null;
 } {

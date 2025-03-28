@@ -1031,6 +1031,7 @@ const logos = {
 interface TeamLogoProps {
   width?: string;
   id: keyof typeof logos;
+  className?: string;
 }
 
 export default function TeamLogo({

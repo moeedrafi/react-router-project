@@ -1,4 +1,4 @@
-export type Teams = "bulls" | "foxes" | "hedgehogs" | "koalas" | "lemurs";
+export type TeamsType = "bulls" | "foxes" | "hedgehogs" | "koalas" | "lemurs";
 
 export interface Article {
   id: string;
@@ -9,7 +9,7 @@ export interface Article {
 export interface PlayerType {
   name: string;
   position: string;
-  teamId: Teams;
+  teamId: TeamsType;
   number: number;
   avatar: string;
   rpg: number;
@@ -19,8 +19,8 @@ export interface PlayerType {
   id: string;
 }
 
-export interface Team {
-  id: Team;
+export interface TeamType {
+  id: TeamsType;
   name: string;
   wins: number;
   losses: number;

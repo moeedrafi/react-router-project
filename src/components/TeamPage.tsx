@@ -3,10 +3,10 @@ import useTeam from "../hooks/useTeam";
 import useTeamNames from "../hooks/useTeamNames";
 import useTeamsArticles from "../hooks/useTeamArticles";
 import TeamLogo from "./TeamLogo";
-import { Article, Team, Teams } from "../utils/types";
+import { Article, Team, TeamsType } from "../utils/types";
 import { slugify } from "../utils";
 
-function useTeamPageData(teamId: Teams) {
+function useTeamPageData(teamId: TeamsType) {
   const { loading: loadingTeamNames } = useTeamNames();
 
   const { loading: loadingarticles, response: articlesResponse } =
@@ -24,11 +24,11 @@ function useTeamPageData(teamId: Teams) {
 }
 
 const TeamPage = () => {
-  const { teamId } = useParams<{ teamId: Teams }>();
+  const { teamId } = useParams<{ teamId: TeamsType }>();
   const validTeamId =
     teamId &&
     ["bulls", "foxes", "hedgehogs", "koalas", "lemurs"].includes(teamId)
-      ? (teamId as Teams)
+      ? (teamId as TeamsType)
       : null;
 
   const { articles, team, loading } = useTeamPageData(validTeamId ?? "bulls");
