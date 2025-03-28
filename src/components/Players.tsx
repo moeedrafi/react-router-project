@@ -1,4 +1,4 @@
-import { Link, useLocation, useSearchParams } from "react-router";
+import { Link, Outlet, useLocation, useSearchParams } from "react-router";
 import { Teams } from "../utils/types";
 import usePlayerNames from "../hooks/usePlayerNames";
 import { slugify } from "../utils";
@@ -54,8 +54,10 @@ export const Players = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container two-column">
       <Sidebar title="Players" list={names} />
+
+      <Outlet />
     </div>
   );
 };

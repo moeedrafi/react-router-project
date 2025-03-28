@@ -6,10 +6,10 @@ export interface Article {
   date: Date;
 }
 
-export interface Player {
+export interface PlayerType {
   name: string;
   position: string;
-  teamId: Team;
+  teamId: Teams;
   number: number;
   avatar: string;
   rpg: number;
@@ -28,5 +28,5 @@ export interface Team {
   coach: string;
   manager: string;
   championships: number[];
-  players: Player[];
+  players: PlayerType[];
 }

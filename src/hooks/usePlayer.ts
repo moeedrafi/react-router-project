@@ -1,6 +1,5 @@
-import { Player } from "../utils/types";
 import useFetch from "./useFetch";
 
-export default function usePlayer(player: Player) {
+export default function usePlayer(player: string) {
   return useFetch(`/players/${player}`, "POST");
 }
