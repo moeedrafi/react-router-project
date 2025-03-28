@@ -3,7 +3,7 @@ import useTeam from "../hooks/useTeam";
 import useTeamNames from "../hooks/useTeamNames";
 import useTeamsArticles from "../hooks/useTeamArticles";
 import TeamLogo from "./TeamLogo";
-import { Article, Team, TeamsType } from "../utils/types";
+import { ArticleType, TeamType, TeamsType } from "../utils/types";
 import { slugify } from "../utils";
 
 function useTeamPageData(teamId: TeamsType) {
@@ -11,10 +11,10 @@ function useTeamPageData(teamId: TeamsType) {
 
   const { loading: loadingarticles, response: articlesResponse } =
     useTeamsArticles(teamId);
-  const articles = (articlesResponse ?? []) as Article[];
+  const articles = (articlesResponse ?? []) as ArticleType[];
 
   const { loading: loadingTeam, response: teamResponse } = useTeam(teamId);
-  const team = (teamResponse ?? null) as Team;
+  const team = (teamResponse ?? null) as TeamType;
 
   return {
     articles,

@@ -6,6 +6,8 @@ import Navbar from "./components/Navbar";
 import TeamPage from "./components/TeamPage";
 import Player from "./components/Player";
 import Team from "./components/Team";
+import Articles from "./components/Articles";
+import Article from "./components/Article";
 
 const App = () => {
   return (
@@ -24,6 +26,10 @@ const App = () => {
             <Route path=":teamId" element={<Team />} />
           </Route>
           <Route path="/:teamId" element={<TeamPage />} />
+          <Route path="/:teamId/articles" element={<Articles />}>
+            <Route path="" element={<h1>Select a Article</h1>} />
+            <Route path=":articleId" element={<Article />} />
+          </Route>
         </Routes>
       </div>
     </Router>

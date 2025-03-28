@@ -1,7 +1,8 @@
 export type TeamsType = "bulls" | "foxes" | "hedgehogs" | "koalas" | "lemurs";
 
-export interface Article {
+export interface ArticleType {
   id: string;
+  body: string;
   title: string;
   date: Date;
 }

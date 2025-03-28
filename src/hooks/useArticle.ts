@@ -1,9 +1,8 @@
 import useFetch from "./useFetch";
 
 interface ArticleArgs {
-  title: string;
-  content: string;
-  author: string;
+  teamId: string | undefined;
+  articleId: string | undefined;
 }
 
 export default function useArticle(args: ArticleArgs) {

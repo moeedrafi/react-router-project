@@ -9,8 +9,8 @@ function CustomLink({
   to: string;
 }) {
   const location = useLocation();
-  const playerId = location.pathname.split("/")[2];
-  const match = playerId === to;
+  const split = location.pathname.split("/");
+  const match = split[split.length - 1] === to;
 
   const styles = match ? { fontWeight: 900, color: "white" } : {};
 
