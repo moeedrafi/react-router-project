@@ -18,16 +18,29 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/players" element={<Players />}>
-            <Route path="" element={<h1>Select a Player</h1>} />
+            <Route
+              path=""
+              element={
+                <div className="sidebar-instruction">Select a Player</div>
+              }
+            />
             <Route path=":playerId" element={<Player />} />
           </Route>
           <Route path="/teams" element={<Teams />}>
-            <Route path="" element={<h1>Select a Team</h1>} />
+            <Route
+              path=""
+              element={<div className="sidebar-instruction">Select a Team</div>}
+            />
             <Route path=":teamId" element={<Team />} />
           </Route>
           <Route path="/:teamId" element={<TeamPage />} />
           <Route path="/:teamId/articles" element={<Articles />}>
-            <Route path="" element={<h1>Select a Article</h1>} />
+            <Route
+              path=""
+              element={
+                <div className="sidebar-instruction">Select an Article</div>
+              }
+            />
             <Route path=":articleId" element={<Article />} />
           </Route>
         </Routes>

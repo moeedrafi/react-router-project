@@ -2,6 +2,7 @@ import { Outlet, useSearchParams } from "react-router";
 import { TeamsType } from "../utils/types";
 import usePlayerNames from "../hooks/usePlayerNames";
 import { Sidebar } from "./Sidebar";
+import { Loading } from "./Loading";
 
 export const Players = () => {
   const [searchParams] = useSearchParams();
@@ -10,14 +11,20 @@ export const Players = () => {
   const names = response as string[];
 
   if (loading) {
-    return <p>LOADING...</p>;
+    return <Loading />;
   }
 
   return (
     <div className="container two-column">
-      <Sidebar title="Players" list={names} />
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+          <Sidebar title="Players" list={names} />
 
-      <Outlet />
+          <Outlet />
+        </>
+      )}
     </div>
   );
 };
