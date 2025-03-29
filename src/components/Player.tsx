@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router";
+import { Link, Navigate, useParams } from "react-router";
 import usePlayer from "../hooks/usePlayer";
 import { PlayerType } from "../utils/types";
 import { Loading } from "./Loading";
@@ -12,14 +12,12 @@ const Player = () => {
     return <Loading />;
   }
 
-  if (!player) {
-    return null;
-  }
-
   return (
     <div className="panel">
       {loading ? (
         <Loading />
+      ) : player === null ? (
+        <Navigate to="/players" />
       ) : (
         <>
           <img

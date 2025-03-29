@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router";
+import { Link, Navigate, useParams } from "react-router";
 import useTeam from "../hooks/useTeam";
 import { TeamType, TeamsType } from "../utils/types";
 import TeamLogo from "./TeamLogo";
@@ -13,6 +13,8 @@ const Team = () => {
     <div className="panel">
       {loading ? (
         <Loading />
+      ) : team === null ? (
+        <Navigate to="/teams" />
       ) : (
         <>
           <div style={{ width: "100%" }}>
