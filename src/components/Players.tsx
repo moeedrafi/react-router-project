@@ -4,7 +4,7 @@ import usePlayerNames from "../hooks/usePlayerNames";
 import { Sidebar } from "./Sidebar";
 import { Loading } from "./Loading";
 
-export const Players = () => {
+const Players = () => {
   const [searchParams] = useSearchParams();
   const team = searchParams.get("teamId");
   const { loading, response } = usePlayerNames(team as TeamsType);
@@ -28,3 +28,5 @@ export const Players = () => {
     </div>
   );
 };
+
+export default Players;

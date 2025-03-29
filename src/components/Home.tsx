@@ -4,7 +4,7 @@ import useTeamNames from "../hooks/useTeamNames";
 import { TeamsType } from "../utils/types";
 import { Loading } from "./Loading";
 
-export const Home = () => {
+const Home = () => {
   const { loading, response } = useTeamNames();
   const teamNames = response as TeamsType[];
 
@@ -27,3 +27,5 @@ export const Home = () => {
     </div>
   );
 };
+
+export default Home;

@@ -3,7 +3,7 @@ import useTeamNames from "../hooks/useTeamNames";
 import { Sidebar } from "./Sidebar";
 import { Loading } from "./Loading";
 
-export const Teams = () => {
+const Teams = () => {
   const { loading, response } = useTeamNames();
   const teamNames = response as string[];
 
@@ -25,3 +25,5 @@ export const Teams = () => {
     </div>
   );
 };
+
+export default Teams;
