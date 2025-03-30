@@ -9,7 +9,7 @@ This project is built with React and React Router, where I explored React Router
 
 ## Features
 
-- URL Params Layout: Learned how to strucute dynamic routes using URL parameters Fully optimized for desktop and mobile devices.
+- ## URL Params Layout: Learned how to strucute dynamic routes using URL parameters Fully optimized for desktop and mobile devices.
 - Query Strings: Learned query strings to filter and fetch data dynamically.
 - Customizing Links: Explored how to enhance navigation by customizing <Link> component with additional styles.
 - Nested Routes: Stories: Learned nested routes ensuring a structured and maintainable routing hierarchy.
